@@ -71,6 +71,25 @@ const parseHTML = require('./parseHTML')
     
     return root
 }
+ function render(AST) {
+    const element = document.createElement(AST.tag)
+    handleChildrenElement(AST.children, element)
+}
+function handleChildrenElement(AST, root) {
+    AST.forEach(item => {
+        if (item.type == 1) {
+            const element = document.createElement(item.tag)
+            item.attrslist.forEach(attr => {
+                element.setAttribute(attr.name, attr.value)
+            });
+            root.appendChild(element)
+            item.children && dg(item.children, element)
+        } else if (item.type == 2) {
+            root.innerHTML = item.text
+        }
+    });
+    return root
+}
 /**
  * 把数组形式的属性转换为键值对
  * @param {*} attrs 属性
@@ -83,4 +102,4 @@ function makeAttrsMap(attrs) {
     return map
 }
 
-module.exports =  {parseAST:parse}
+module.exports =  {parseAST:parse,parseDOM:render}
