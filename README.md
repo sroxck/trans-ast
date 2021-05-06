@@ -1,7 +1,7 @@
 # trans-ast
-trans-ast是一个可以将html字符串解析为AST(JS)对象的一个插件,提供Template转AST,AST转DOM的功能   
+trans-ast是一个可以将html字符串解析为AST(JS)对象的一个插件,提供Template转AST,AST转DOM的功能,解析大量HTML字符串的效率相比传统DOM操作提升25倍以上  
 
-演示地址: [trans-ast-demo](yalibook.com/vuepress/demo)
+演示地址: [trans-ast-demo](http://www.yalibook.com/vuepress/demo)
 
 ## 安装
 `npm install --save trans-ast`   
