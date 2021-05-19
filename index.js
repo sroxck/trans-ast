@@ -10,7 +10,6 @@ const parseHTML = require('./parseHTML')
     // 当前元素的父级元素
     let currentParent
     // 生成AST的临时栈
-    
     let stack = []
     parseHTML(template,{
         //匹配开始标签
