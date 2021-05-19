@@ -13,6 +13,7 @@ const parseHTML = require('./parseHTML')
     let stack = []
     parseHTML(template,{
         //匹配开始标签
+        
         start:(tag,attrs,unary)=>{
             // 创建AST元素
             // type,tag,parent,children,attrlist
