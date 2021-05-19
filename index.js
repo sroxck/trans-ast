@@ -4,7 +4,6 @@ const parseHTML = require('./parseHTML')
  * @param {*} template 要解析的模板字符串
  * @returns 
  */
-
  function parse(template) {
     //最终返回出去的AST对象
     let root 
