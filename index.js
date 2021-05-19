@@ -12,7 +12,6 @@ const parseHTML = require('./parseHTML')
     // 生成AST的临时栈
     let stack = []
     parseHTML(template,{
-        
         //匹配开始标签
         start:(tag,attrs,unary)=>{
             // 创建AST元素
